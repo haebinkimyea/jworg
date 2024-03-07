@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('e37dc9d0ea962e16e35f4f3fb2fc0e8e');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '2024년 예수의 죽음을 기념하는 행사',
+        description: '그분의 희생은 우리에게 어떤 의미가 있습니까?.',
+        imageUrl:
+          'https://cms-imgp.jw-cdn.org/img/p/1102024385/univ/art/1102024385_univ_cnt_2_lg.jpg',
+        link: {
+          mobileWebUrl: 'https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/',
+          webUrl: 'https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/',
+        },
+      },
+      buttons: [
+        {
+          title: '2024년 3월 24일',
+          link: {
+            mobileWebUrl: 'https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/',
+            webUrl: 'https://www.jw.org/ko/%EC%97%AC%ED%98%B8%EC%99%80%EC%9D%98-%EC%A6%9D%EC%9D%B8/memorial/',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
